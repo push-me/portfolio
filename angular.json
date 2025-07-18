@@ -20,6 +20,8 @@
             "outputPath": "dist/portfolio",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "baseHref": "/portfolio/",
+            "deployUrl": "/portfolio/",
             "polyfills": [
               "zone.js"
             ],
