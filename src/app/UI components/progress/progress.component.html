@@ -1,0 +1,15 @@
+<div class="progress-container" [style.borderRadius]="config.borderRadius || '5px'">
+    <div
+      class="progress-bar"
+      [style.width.%]="config.value"
+      [style.backgroundColor]="config.color"
+      [style.height]="config.height || '15px'"
+      [style.borderRadius]="config.borderRadius || '5px'"
+      [ngClass]="{
+        'striped': config.striped,
+        'animated': config.animated
+      }"
+    >
+      <span *ngIf="config.label" class="label">{{ config.label }}</span>
+    </div>
+</div>

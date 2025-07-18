@@ -1,0 +1,21 @@
+<div [ngClass]="{'dropdown': true, 'open': isOpen}" >
+  <button  
+  [attr.data-type]="config.direction" 
+  [ngClass]="['dropdown-toggle', 'btn', config.btnClass]" 
+  (click)="toggleDropdown()">
+    {{ config.label }}
+  </button>
+  <div [ngClass]="['dropdown-menu', config.direction]">
+    <ul>
+      <li *ngFor="let item of config.menu">
+        <a href="null" (click)="onItemClick(item)">
+          <!-- Render based on whether `item.value` is a TemplateRef or a string -->
+          <ng-container *ngIf="isTemplate(item.value); else textValue">
+            <ng-container *ngTemplateOutlet="item.value"></ng-container>
+          </ng-container>
+          <ng-template #textValue>{{ item.value }}</ng-template>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

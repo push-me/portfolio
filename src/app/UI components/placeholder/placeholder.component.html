@@ -1,0 +1,6 @@
+<div class="placeholder-card">
+  <!-- Create placeholder blocks dynamically based on the dimensions -->
+  <div *ngFor="let style of styles" class="placeholder-block" [ngStyle]="style"></div>
+</div>
+
+<ng-content ></ng-content>

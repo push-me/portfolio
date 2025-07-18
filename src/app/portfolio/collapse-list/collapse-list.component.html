@@ -1,0 +1,40 @@
+<app-breadcrumb [config]="{
+  items:[
+      { label: 'Home', route: '/home' }, 
+      { label: 'Portfolio', route: '/portfolio' }, 
+      { label: 'Collapse', route: '/collapse' }
+  ],
+  divider:'>'}">
+</app-breadcrumb>
+
+
+
+<div class="collapse-list portfolio-item">
+  <h3>Vertical animation</h3>
+
+  <app-collapse [config]=" {
+    direction: 'vertical',
+    duration: 2000,
+    height:'66px',
+    btnText:'Example 1',
+    customClass: 'custom-collapse',
+    isCollapsed:true
+  }">Content for the first button
+  </app-collapse>
+
+  <h3>Horizontal animation</h3>
+
+  <app-collapse [config]=" {
+  direction: 'horizontal',
+  width:'210px',
+  duration: 2000,
+  btnText:'Example 2',
+  customClass: 'custom-collapse',
+  isCollapsed:true
+}">Content for the second
+  </app-collapse>
+</div>
+
+
+
+<!-- <app-collapse-group></app-collapse-group> -->

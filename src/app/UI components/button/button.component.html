@@ -1,0 +1,5 @@
+<div [ngClass]="{'flex-container':true,'btnGroup':config.isGroupButton}">
+  <button [ngClass]="getDynamicClasses()" [ngStyle]="config.styles" [disabled]="config.disabled"  (click)="toggleActive()">
+    <ng-content></ng-content>
+  </button>
+</div>

@@ -1,0 +1,12 @@
+<div [ngClass]="['popover-container',config.placement]">
+    <app-button [config]= " config.btnType ?? {type:'primary'}" (click)="togglePopover()">{{config.btnText}}</app-button>
+    <ng-content></ng-content>
+    <!-- <button class="btn" (click)="togglePopover()">
+        <ng-content></ng-content>
+    </button> -->
+    <div *ngIf="isVisible" class="popover-content" [ngStyle]="config.parentStyle">
+        <div [ngClass]="arrowClass"></div>
+        <h3 *ngIf="config.title" [ngStyle]="config.titleStyle" class="popover-title">{{ config.title }}</h3>
+        <div class="popover-body" [ngStyle]="config.bodyStyle">{{ config.content }}</div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+<section class="contact-form">
+    <h2 class="contact-title">Contact <span>Me</span></h2>
+
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+        <div class="input-box">
+            <input type="text" id="name" formControlName="name" placeholder="Name">
+            <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="error-message">
+                Please, enter your name
+            </div>
+        </div>
+        <div class="input-box">
+            <input type="email" formControlName="email" placeholder="Email">
+            <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="error-message">
+                <div *ngIf="contactForm.get('email')?.errors?.['required']">Email is required.</div>
+                <div *ngIf="contactForm.get('email')?.errors?.['email']">Invalid email address.</div>
+            </div>
+        </div>
+
+        <div class="input-box">
+            <input type="number" formControlName="phone" placeholder="Phone Number">
+            <div *ngIf="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched" class="error-message">
+                <div *ngIf="contactForm.get('email')?.errors?.['required']">Phone number is required.</div>
+                <div *ngIf="contactForm.get('email')?.errors?.['email']">Invalid number format.</div>
+            </div>
+        </div>
+
+        <div class="input-box">
+            <input type="text" formControlName="subject" placeholder="Subject">
+            <div *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched"
+                class="error-message">
+                Please, enter the subject
+            </div>
+        </div>
+
+        <div class="input-box">
+            <textarea name="" id="" formControlName="message" placeholder="Your Message"></textarea>
+            <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"
+                class="error-message">
+                Please, type your message
+            </div>
+        </div>
+
+        <input type="submit" [ngClass]="{ 'enabled': contactForm.valid, 'disabled': contactForm.invalid }" id="submit-btn" [disabled]="contactForm.invalid" value="Submit">
+    </form>
+</section>

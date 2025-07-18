@@ -1,0 +1,105 @@
+<app-breadcrumb [config]="{
+  items:[
+      { label: 'Home', route: '/home' }, 
+      { label: 'Portfolio', route: '/portfolio' }, 
+      { label: 'Toasts', route: '/toast' }
+  ],
+  divider:'>'}">
+</app-breadcrumb>
+
+<div class="portfolio-item">
+  <h3 class="center">Relative positioning</h3>
+  <div class="verticalPosition">
+    <div class="verticalGrid">
+      <app-button [config]="{type:'primary'}" (click)="addToast(relTopLeft)">
+        Top Left
+      </app-button>
+    
+      <app-button [config]="{type:'secondary'}" (click)="addToast(relTopMiddle)">
+        Top Center
+      </app-button>
+    
+      <app-button [config]="{type:'danger'}" (click)="addToast(relTopRight)">
+        Top Right
+      </app-button>
+    
+      <app-button [config]="{type:'success'}" (click)="addToast(relMiddleLeft)">
+        Middle Left
+      </app-button>
+
+      <app-button [config]="{type:'info'}" (click)="addToast(relMiddleCenter)">
+        Middle Center
+      </app-button>
+
+      <app-button [config]="{type:'dark'}" (click)="addToast(relMiddleRight)">
+        Middle Right
+      </app-button>
+
+      <app-button [config]="{type:'warning'}" (click)="addToast(relBottomLeft)">
+        Bottom Left
+      </app-button>
+
+      <app-button [config]="botCenter" (click)="addToast(relBottomCenter)">
+        Bottom Center
+      </app-button>
+
+      <app-button [config]="{type:'warning',styles:{backgroundColor:'#e217d6'}}" (click)="addToast(relBottomRight)">
+        Bottom Right
+      </app-button>
+    </div>
+
+    
+
+    <section class="toast-background">
+      <ng-container #toastContainer></ng-container>
+    </section>
+  </div>
+  
+  
+
+
+  
+
+  <h3 class="center">Fixed positioning</h3>
+  <div class="horizontalGrid">
+   
+    <app-button [config]="{styles:{whiteSpace:'nowrap'},type:'primary'}" (click)="addToast(absTopLeft)">
+      Top Left
+    </app-button>
+  
+    <app-button [config]="{styles:{whiteSpace:'nowrap'},type:'secondary'}" (click)="addToast(absTopCenter)">
+      Top Center
+    </app-button>
+  
+    <app-button [config]="{styles:{whiteSpace:'nowrap'},type:'danger'}" (click)="addToast(absTopRight)">
+      Top Right
+    </app-button>
+  
+    <app-button [config]="{styles:{whiteSpace:'nowrap'},type:'success'}" (click)="addToast(absMiddleLeft)">
+      Middle Left
+    </app-button>
+
+    <app-button [config]="{styles:{whiteSpace:'nowrap'},type:'info'}" (click)="addToast(absMiddleCenter)">
+      Middle Center
+    </app-button>
+
+    <app-button [config]="{styles:{whiteSpace:'nowrap'},type:'dark'}" (click)="addToast(absMiddleRight)">
+      Middle Right
+    </app-button>
+
+    <app-button [config]="{styles:{whiteSpace:'nowrap'},type:'warning'}" (click)="addToast(absBottomLeft)">
+      Bottom Left
+    </app-button>
+
+    <app-button [config]="botCenter" (click)="addToast(absBottomCenter)">
+      Bottom Center
+    </app-button>
+
+    <app-button [config]="botRight" (click)="addToast(absBottomRight)">
+      Bottom Right
+    </app-button>
+  </div>
+</div>
+
+
+

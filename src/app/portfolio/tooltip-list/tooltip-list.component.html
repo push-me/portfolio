@@ -1,0 +1,36 @@
+<app-breadcrumb [config]="{
+    items:[
+        { label: 'Home', route: '/home' }, 
+        { label: 'Portfolio', route: '/portfolio' }, 
+        { label: 'Tooltips', route: '/tooltip' }
+    ],
+    divider:'>'}">
+</app-breadcrumb>
+
+<div class="portfolio-item">
+    <div class="tooltips">
+        <h3>Top</h3>
+        <app-tooltip [config]="tooltipConfigTop">
+            <app-button [config]="{type:'primary'}">Hover over me!</app-button>
+        </app-tooltip>
+        <h3>Left</h3>
+        <app-tooltip [config]="tooltipConfigLeft">
+            <app-button [config]="{type:'primary'}">Hover over me!</app-button>
+        </app-tooltip>
+        <h3>Right</h3>
+        <app-tooltip [config]="tooltipConfigRight">
+            <app-button [config]="{type:'primary'}">Hover over me!</app-button>
+        </app-tooltip>
+        <h3>Bottom</h3>
+        <app-tooltip [config]="tooltipConfigBottom">
+            <app-button [config]="{type:'primary'}">Hover over me!</app-button>
+        </app-tooltip>
+        <h3>Custom</h3>
+        <app-tooltip [config]="customTooltip">
+            <app-button [config]="{type:'danger'}">Hover over me!</app-button>
+        </app-tooltip>
+    </div>
+</div>
+  
+
+

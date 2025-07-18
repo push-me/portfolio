@@ -1,0 +1,70 @@
+//Medium
+@media (max-width: 600px) and (min-width:401px) {
+    .spinWithButton {
+        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        grid-gap: 2rem;
+        justify-items: center;
+        
+    }
+
+    .spinners {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+        justify-items: center;
+    }
+
+    h3 {
+        text-align: center;
+    }
+}
+//Small
+@media (max-width: 400px) {
+    .spinWithButton {
+        grid-template-columns: repeat(1, 1fr);
+        display: grid;
+        grid-gap: 2rem;
+        justify-items: center;
+        
+    }
+
+    .spinners {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 2rem;
+        justify-items: center;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    .portfolio-item {
+        margin: 0 auto;
+    }
+}
+//Large
+@media (min-width: 601px) {
+    .spinners {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .spinWithButton {
+        display: flex;
+        
+        gap: 0.7rem;
+    }
+}
+//Common
+.spinWithButton {
+    margin: 1rem 0;
+}
+
+
+
+h3 {
+    margin: 1rem 0;
+}
+

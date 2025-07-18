@@ -1,0 +1,92 @@
+<app-breadcrumb [config]="{
+    items:[
+        { label: 'Home', route: '/home' }, 
+        { label: 'Portfolio', route: '/portfolio' }, 
+        { label: 'Spinner', route: '/spinner' }
+    ],
+    divider:'>'}">
+</app-breadcrumb>
+
+<div class="portfolio-item">
+    <h3>Border spinners</h3>
+
+    <div class="spinners">
+        <app-spinner [config]="spinPrimaryCfg"></app-spinner>
+        <app-spinner [config]="spinSecondaryCfg"></app-spinner>
+        <app-spinner [config]="spinSuccessCfg"></app-spinner>
+        <app-spinner [config]="spinDangerCfg"></app-spinner>
+        <app-spinner [config]="spinWarningCfg"></app-spinner>
+        <app-spinner [config]="spinInfoCfg"></app-spinner>
+        <app-spinner [config]="spinLightCfg"></app-spinner>
+        <app-spinner [config]="spinDarkCfg"></app-spinner>
+    </div>
+    
+
+    <h3>Grow</h3>
+    <div class="spinners">
+        <app-spinner [config]="GrowPrimaryCfg"></app-spinner>
+        <app-spinner [config]="GrowSecondaryCfg"></app-spinner>
+        <app-spinner [config]="GrowSuccessCfg"></app-spinner>
+        <app-spinner [config]="GrowDangerCfg"></app-spinner>
+        <app-spinner [config]="GrowWarningCfg"></app-spinner>
+        <app-spinner [config]="GrowInfoCfg"></app-spinner>
+        <app-spinner [config]="GrowLightCfg"></app-spinner>
+        <app-spinner [config]="GrowDarkCfg"></app-spinner>
+    </div>
+
+
+    <h3>With buttons</h3>
+    <div class="spinWithButton">
+        <app-button [config]="{type:'primary'}">
+            <app-spinner [config]="spinLightCfg"></app-spinner>
+        </app-button>
+
+        <app-button [config]="{type:'primary'}">
+            <app-spinner [config]="spinLoadingPrimaryCfg"></app-spinner>
+        </app-button>
+
+        <app-button [config]="{type:'success'}">
+            <app-spinner [config]="spinLoadingSuccessCfg"></app-spinner>
+        </app-button>
+
+        <app-button [config]="{type:'info'}">
+            <app-spinner [config]="spinLoadingInfoCfg"></app-spinner>
+        </app-button>
+    </div>
+
+    <div class="spinWithButton">
+        <app-button [config]="{type:'secondary'}">
+            <app-spinner [config]="spinLightCfg"></app-spinner>
+        </app-button>
+
+        <app-button [config]="{type:'secondary'}">
+            <app-spinner [config]="spinLoadingSecondaryCfg"></app-spinner>
+        </app-button>
+
+        <app-button [config]="{type:'danger'}">
+            <app-spinner [config]="spinLoadingDangerCfg"></app-spinner>
+        </app-button>
+
+        <app-button [config]="{type:'warning'}">
+            <app-spinner [config]="spinLoadingWarningCfg"></app-spinner>
+        </app-button>
+    </div>
+
+
+    <h3>Custom</h3>
+    <div class="spinWithButton">  
+        <app-spinner [config]="custom1Cfg"></app-spinner>
+        <app-spinner [config]="custom2Cfg"></app-spinner>
+        <app-spinner [config]="custom3Cfg"></app-spinner>
+        <app-spinner [config]="custom4Cfg"></app-spinner>  
+    </div>
+
+    <div class="spinWithButton">  
+        <app-spinner [config]="customGrow1Cfg"></app-spinner>
+        <app-spinner [config]="customGrow2Cfg"></app-spinner>
+        <app-spinner [config]="customGrow3Cfg"></app-spinner>
+        <app-spinner [config]="customGrow4Cfg"></app-spinner>  
+    </div>
+    
+</div>
+

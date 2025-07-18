@@ -1,0 +1,32 @@
+@media (max-width: 1030px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 710px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width: 1031px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
+
+.custom-shadow-card {
+    width: 18rem;
+}
+
+.grid {
+    display: grid;
+    
+    grid-gap: 2rem;
+}
+
+.portfolio-item {
+    max-width: none;
+}

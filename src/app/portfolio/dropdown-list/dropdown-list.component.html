@@ -1,0 +1,33 @@
+<app-breadcrumb [config]="{
+    items:[
+        { label: 'Home', route: '/home' }, 
+        { label: 'Portfolio', route: '/portfolio' }, 
+        { label: 'Dropdowns', route: '/dropdown' }
+    ],
+    divider:'>'}">
+</app-breadcrumb>
+
+<div class="portfolio-item">
+    <h3 class="center">Dropdowns with different direction</h3>
+
+    <div class="directionBox">
+        <app-dropdown-menu [config]="dropEnd"></app-dropdown-menu>
+        <app-dropdown-menu [config]="dropStart"></app-dropdown-menu>
+        <app-dropdown-menu [config]="dropdown"></app-dropdown-menu>
+        <app-dropdown-menu [config]="dropUp"></app-dropdown-menu>
+    </div>
+
+    <h3 class="center">Different styles</h3>
+    
+    <div class="types">
+        <app-dropdown-menu [config]="primary"></app-dropdown-menu>
+        <app-dropdown-menu [config]="secondary"></app-dropdown-menu>
+        <app-dropdown-menu [config]="success"></app-dropdown-menu>
+        <app-dropdown-menu [config]="warning"></app-dropdown-menu>
+        <app-dropdown-menu [config]="danger"></app-dropdown-menu>
+        <app-dropdown-menu [config]="info"></app-dropdown-menu>
+    </div>
+    
+</div>
+
+

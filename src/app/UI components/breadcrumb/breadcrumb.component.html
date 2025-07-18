@@ -1,0 +1,34 @@
+<nav aria-label="breadcrumb" class="navMargin">
+  <ul class="breadcrumb">
+    <li *ngFor="let item of config.items; let last = last">
+      <a [routerLink]="item.route" [ngStyle]="item.styles">{{ item.label }}</a>
+
+      <!-- Divider -->
+      <ng-container *ngIf="!last">
+        <span *ngIf="!config.svgIcon; else iconDivider">
+          {{ config.divider }}
+        </span>
+
+        <ng-template #iconDivider>
+          <app-icon [config]="{ 
+            name: config.svgIcon!.divider,
+            styles: config.svgIcon!.styles
+            }">
+
+          </app-icon>
+          <!-- <span [innerHTML]="safeDivider"></span> -->
+        </ng-template>
+      </ng-container>
+
+      <!-- <ng-container *ngIf="!last">
+        <span *ngIf="!isSvgDivider(); else iconDivider">
+          {{ divider }}
+        </span>
+
+        <ng-template #iconDivider>
+          <span [innerHTML]="safeDivider"></span>
+        </ng-template>
+      </ng-container> -->
+    </li>
+  </ul>
+</nav>

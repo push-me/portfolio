@@ -1,0 +1,229 @@
+<app-breadcrumb [config]="{
+    items:[
+        { label: 'Home', route: '/home' }, 
+        { label: 'Portfolio', route: '/portfolio' }, 
+        { label: 'Button Group', route: '/button-group' }
+    ],
+    divider:'>'}">
+</app-breadcrumb>
+
+<div class="portfolio-item">
+    <h3>Basic</h3>
+
+    <app-button-group class="horizontal" orientation="horizontal">
+        <app-button [config]="{
+            type:'primary',
+            isGroupButton:true,
+            groupPosition:'horizontal-first'
+            }">
+            Left
+        </app-button>
+        <app-button [config]="{type:'primary', isGroupButton:true}">Middle</app-button>
+        <app-button [config]="{type:'primary',groupPosition:'horizontal-last', isGroupButton:true}">Last</app-button>
+       
+    </app-button-group>
+
+    <h3>With links</h3>
+
+    <app-button-group class="horizontal" orientation="horizontal">
+        <div class="link-group">
+            <a href="button-group" class="btn btn-primary active">Active link</a>
+            <a href="button-group" class="btn btn-primary">Link</a>
+            <a href="button-group" class="btn btn-primary">Link</a>
+        </div>
+      
+    </app-button-group>
+
+    <h3>With custom styles</h3>
+
+    <app-button-group class="horizontal" orientation="horizontal">
+        <app-button [config]="{
+            type:'primary',
+            styles:{background:'yellow',color:'#332a35'}, 
+            isGroupButton:true,
+            groupPosition:'horizontal-first'}">
+            Custom
+        </app-button>
+        <app-button [config]="{
+            type:'primary',
+            styles:{color:'#231717',background:'#be3030',fontStyle:'oblique'}, 
+            isGroupButton:true}">
+            Custom
+        </app-button>
+        <app-button [config]="{
+            type:'primary', 
+            isGroupButton:true,
+            styles:{background:'#8f708f',color:'#212529',fontStyle:'italic'}
+            }">
+            Custom
+        </app-button>
+        <app-button [config]="{
+            type:'primary', 
+            isGroupButton:true,
+            styles:{background:'purple'},
+            groupPosition:'horizontal-last'}">
+            Custom
+        </app-button>
+    </app-button-group>
+
+    <h3>Outlined</h3>
+
+    <app-button-group class="horizontal" orientation="horizontal">
+        <app-button [config]="{
+            type:'dark-outlined',
+            isGroupButton:true,
+            groupPosition:'horizontal-first'
+            }">
+            Left
+        </app-button>
+        <app-button [config]="{type:'dark-outlined', isGroupButton:true}">Middle</app-button>
+        <app-button [config]="{type:'dark-outlined',groupPosition:'horizontal-last', isGroupButton:true}">Last</app-button>
+       
+    </app-button-group>
+
+    <h3>Toggle</h3>
+    <div class="toggleMargin">
+        <app-button-group class="horizontal" orientation="horizontal">
+            <app-button [config]="{
+                type:'dark-outlined',
+                isGroupButton:true,
+                isToggle:true,
+                groupPosition:'horizontal-first'
+                }">
+                Left
+            </app-button>
+            <app-button [config]="{
+                type:'dark-outlined',
+                isToggle:true,
+                isGroupButton:true}">Middle</app-button>
+            <app-button [config]="{type:'dark-outlined',isToggle:true,groupPosition:'horizontal-last', isGroupButton:true}">Last</app-button>
+           
+        </app-button-group>
+    </div>
+
+    <div class="toggleMargin">
+        <app-button-group class="horizontal" orientation="horizontal">
+            <app-button [config]="{
+                type:'primary-outlined',
+                isGroupButton:true,
+                isToggle:true,
+                groupPosition:'horizontal-first'
+                }">
+                Primary
+            </app-button>
+    
+            <app-button [config]="{
+                type:'secondary-outlined',
+                isToggle:true,
+                isGroupButton:true}">
+                Secondary
+            </app-button>
+    
+            <app-button [config]="{
+                type:'success-outlined',
+                isToggle:true,
+                isGroupButton:true}">
+                Success
+            </app-button>
+    
+            <app-button [config]="{
+                type:'warning-outlined',
+                isToggle:true,
+                groupPosition:'horizontal-last',
+                isGroupButton:true}">
+                Warning
+            </app-button>
+            <br>
+            
+        </app-button-group>
+    </div>
+    
+      
+    <div class="toggleMargin">
+        <app-button-group class="horizontal" orientation="horizontal">
+            <app-button [config]="{
+                type:'danger-outlined',
+                isToggle:true,
+                groupPosition:'horizontal-first',
+                isGroupButton:true}">
+                Danger
+            </app-button>
+    
+            <app-button [config]="{
+                type:'info-outlined',
+                isToggle:true,
+                isGroupButton:true}">
+                Info
+            </app-button>
+    
+            <app-button [config]="{
+                type:'light-outlined',
+                isToggle:true,
+                isGroupButton:true}">
+                Light
+            </app-button>
+    
+            <app-button [config]="{
+                type:'dark-outlined',
+                isToggle:true,
+                groupPosition:'horizontal-last',
+                isGroupButton:true}">
+                Dark
+            </app-button>
+           
+        </app-button-group>
+    </div>
+       
+  
+    
+
+    <h3>Radio</h3>
+
+    <app-button-group class="horizontal" orientation="horizontal">
+        <app-button [config]="{
+            type:'dark-outlined',
+            isGroupButton:true,
+            radioId:'1',
+            groupPosition:'horizontal-first'
+            }">
+            Left
+        </app-button>
+
+        <app-button [config]="{
+            type:'dark-outlined',
+            isGroupButton:true,
+            radioId:'2',
+            }">
+            Left
+        </app-button>
+
+        <app-button [config]="{
+            type:'dark-outlined',
+            radioId:'3',
+            groupPosition:'horizontal-last',
+            isGroupButton:true}">
+            Middle
+        </app-button>
+        
+    </app-button-group>
+ 
+
+    <h3>Group with a dropdown menu</h3>
+
+    <app-button-group class="horizontal" orientation="horizontal">
+        <app-button [config]="{
+            type:'primary',
+            isToggle:true,
+            isGroupButton:true,
+            groupPosition:'horizontal-first'
+            }">
+            Toggle 1
+        </app-button>
+        <app-button [config]="{type:'primary', isToggle:true, isGroupButton:true}">Toggle 2</app-button>
+
+        <app-dropdown-menu [config]="dropdownRight">
+            <!-- <app-button [config]="{type:'primary'}">Action 1</app-button> -->
+            <!-- <app-button [config]="{type:'primary'}">Action 2</app-button> -->
+        </app-dropdown-menu>
+    </app-button-group>
+</div>

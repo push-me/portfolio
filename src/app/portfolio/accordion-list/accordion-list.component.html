@@ -1,0 +1,12 @@
+<app-breadcrumb [config]="{
+    items:[
+        { label: 'Home', route: '/home' }, 
+        { label: 'Portfolio', route: '/portfolio' }, 
+        { label: 'Accordion', route: '/accordion' }
+    ],
+    divider:'>'}">
+</app-breadcrumb>
+
+<div class="portfolio-item">
+    <app-accordion [config]="accordion1"></app-accordion>
+</div>

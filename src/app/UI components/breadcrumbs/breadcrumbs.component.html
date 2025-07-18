@@ -1,0 +1,18 @@
+<h3>Breadcrumb with text divider</h3>
+
+<app-breadcrumb [items]="[
+    { label: 'Home', route: '/home' }, 
+    { label: 'Portfolio', route: '/portfolio' }, 
+    { label: 'Contact', route: '/contact' }
+    ]" divider=">">
+</app-breadcrumb>
+
+<h3>Breadcrumb with svg icon as a divider</h3>
+
+<app-breadcrumb [items]="[
+    { label: 'Home', route: '/home' }, 
+    { label: 'Portfolio', route: '/portfolio' }, 
+    { label: 'Contact', route: '/contact' }
+  ]"
+    divider='<svg width="12" height="12" xmlns="http://www.w3.org/2000/svg"><path d="M2 0l8 6-8 6V0z"/></svg>'>
+</app-breadcrumb>

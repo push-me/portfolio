@@ -1,0 +1,79 @@
+<app-breadcrumb [config]="{
+  items:[
+      { label: 'Home', route: '/home' }, 
+      { label: 'Portfolio', route: '/portfolio' }, 
+      { label: 'Alerts', route: '/alert' }
+  ],
+  divider:'>'}">
+</app-breadcrumb>
+
+<div class="portfolio-item">
+
+  <app-alert [config]="{
+    type: 'success',
+    message: 'This is a success alert!',
+    dismissible: false
+  }">
+
+  </app-alert>
+
+  <app-alert [config]="{
+    type:'primary',
+    message: 'This is a primary alert',
+    dismissible:false
+  }">
+  </app-alert>
+
+  <app-alert [config]="{
+  type:'secondary',
+  message: 'This is a secondary alert',
+  dismissible:false
+}"></app-alert>
+
+  <app-alert [config]="{
+  type:'danger',
+  message: 'This is a danger alert',
+  dismissible:false
+}"></app-alert>
+
+  <app-alert [config]="{
+  type:'warning',
+  message: 'This is a warning alert',
+  dismissible:false
+}"></app-alert>
+
+  <app-alert [config]="{
+  type:'info',
+  message: 'This is an info alert',
+  dismissible:false
+}"></app-alert>
+
+  <app-alert [config]="{
+  type:'light',
+  message: 'This is a light alert',
+  dismissible:false
+}"></app-alert>
+
+  <app-alert [config]="{
+  type:'dark',
+  message: 'This is a dark alert',
+  dismissible:false
+}"></app-alert>
+
+  <app-alert [config]="btnCfg"></app-alert>
+
+  <app-alert #alertToClose [config]="timerCfg">
+    <app-button (click)="triggerAlertClose(alertToClose)" type="primary-1-3">
+      Trigger Timer
+    </app-button>
+  </app-alert>
+
+  <app-alert id="alertWithLink" [config]="linkCfg"></app-alert>
+
+  <app-alert class="alertWithextraContent" [config]="extraContentCfg"></app-alert>
+
+  <app-alert id="iconAlert" [config]="iconCfg"></app-alert>
+
+  <!-- <app-icon [config]="{ name: 'close', styles: 'fill:blue', size: 48 }"></app-icon> -->
+
+</div>

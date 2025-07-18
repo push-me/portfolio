@@ -1,0 +1,120 @@
+<app-breadcrumb [config]="{
+  items:[
+      { label: 'Home', route: '/home' }, 
+      { label: 'Portfolio', route: '/portfolio' }, 
+      { label: 'Carousel', route: '/carousel' }
+  ],
+  divider:'>'}">
+</app-breadcrumb>
+
+<div class="portfolio-item">
+  <h3 class="text-center">Fade</h3>
+  <div class="carousel-container">
+      <app-carousel [config]="{
+          images: imageList,
+          showArrows: true,
+          showIndicators: false,
+          showCaptions: false,
+          animationType: 'fade',
+          autoplay: false,
+        }">
+      </app-carousel>
+  </div>
+  
+  <h3 class="text-center">Slide</h3>
+  <div class="carousel-container">
+      <app-carousel [config]="{
+          images: imageList,
+          showArrows: true,
+          showIndicators: false,
+          showCaptions: false,
+          animationType: 'slide',
+          autoplay: false,
+          captions:['cap-1', 'cap-2', 'cap-3', 'cap-4', 'cap-5', 'cap-6', 'cap-7',],
+          autoplaySpeed: 10000,
+          arrowStyles: { color: '#fff', hoverColor: '#f00', size: '32px' }
+        }">
+      </app-carousel>
+  </div>
+  
+  <h3 class="text-center">Caption</h3>
+  <div class="carousel-container">
+      <app-carousel [config]="{
+          images: imageList,
+          showArrows: true,
+          showIndicators: false,
+          showCaptions: true,
+          animationType: 'slide',
+          autoplay: false,
+          captions:['cap-1', 'cap-2', 'cap-3', 'cap-4', 'cap-5', 'cap-6', 'cap-7',],
+          autoplaySpeed: 10000,
+          arrowStyles: { color: '#fff', hoverColor: '#f00', size: '32px' }
+        }">
+      </app-carousel>
+  </div>
+  
+  <h3 class="text-center">Indicators</h3>
+  <div class="carousel-container">
+      <app-carousel [config]="{
+          images: imageList,
+          showArrows: true,
+          showIndicators: true,
+          showCaptions: false,
+          animationType: 'slide',
+          autoplay: false,
+          captions:['cap-1', 'cap-2', 'cap-3', 'cap-4', 'cap-5', 'cap-6', 'cap-7',],
+          autoplaySpeed: 10000,
+          arrowStyles: { color: '#fff', hoverColor: '#f00', size: '32px' }
+        }">
+      </app-carousel>
+  </div>
+  
+  <h3 class="text-center">Indicators and Caption</h3>
+  <div class="carousel-container">
+      <app-carousel [config]="{
+          images: imageList,
+          showArrows: true,
+          showIndicators: true,
+          showCaptions: true,
+          animationType: 'slide',
+          autoplay: false,
+          captions:['cap-1', 'cap-2', 'cap-3', 'cap-4', 'cap-5', 'cap-6', 'cap-7',],
+          autoplaySpeed: 10000,
+          arrowStyles: { color: '#fff', hoverColor: '#f00', size: '32px' }
+        }">
+      </app-carousel>
+  </div>
+
+  <h3 class="text-center">Autoplay</h3>
+  <div class="carousel-container">
+      <app-carousel [config]="{
+          images: imageList,
+          showArrows: false,
+          showIndicators: false,
+          showCaptions: false,
+          animationType: 'slide',
+          autoplay: true,
+          captions:['cap-1', 'cap-2', 'cap-3', 'cap-4', 'cap-5', 'cap-6', 'cap-7',],
+          autoplaySpeed: 3000,
+          arrowStyles: { color: '#fff', hoverColor: '#f00', size: '32px' }
+        }">
+      </app-carousel>
+  </div>
+
+  <h3 class="text-center">Custom arrows</h3>
+  <div class="carousel-container">
+      <app-carousel [config]="{
+          images: imageList,
+          showArrows: true,
+          showIndicators: true,
+          showCaptions: true,
+          animationType: 'slide',
+          autoplay: false,
+          captions:['cap-1', 'cap-2', 'cap-3', 'cap-4', 'cap-5', 'cap-6', 'cap-7',],
+          autoplaySpeed: 3000,
+          arrowStyles: { borderRadius: '50%', width:'40px',height:'40px', backgroundColor:'blue' }
+        }">
+      </app-carousel>
+  </div>
+</div>
+

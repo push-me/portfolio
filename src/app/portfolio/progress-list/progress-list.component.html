@@ -1,0 +1,22 @@
+<app-breadcrumb [config]="{
+    items:[
+        { label: 'Home', route: '/home' }, 
+        { label: 'Portfolio', route: '/portfolio' }, 
+        { label: 'Progress', route: '/progress' }
+    ],
+    divider:'>'}">
+</app-breadcrumb>
+
+<div class="portfolio-item">
+
+    <h4>Different types</h4>
+    <app-progress [config]="{ value: 25, color: '#28a745', label: '25%' }"></app-progress>
+    <app-progress [config]="{ value: 50, color: '#17a2b8', label: '50%', height: '20px' }"></app-progress>
+    <app-progress [config]="{ value: 75, color: '#ffc107', label: '75%', height: '20px', borderRadius: '10px' }"></app-progress>
+    <app-progress [config]="{ value: 100, color: '#dc3545', label: '100%' }"></app-progress>
+    <h4> Striped and Animated</h4>
+    <app-progress [config]="{ value: 50, color: '#007bff', label: '50%', striped: true, animated: true }"></app-progress>
+</div>   
+
+
+

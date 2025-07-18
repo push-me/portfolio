@@ -1,0 +1,11 @@
+.button-group {
+  display: inline-flex;
+  align-items: flex-start;
+  position: relative;
+  justify-content: center;
+
+  &.vertical {
+    flex-direction: column;
+  }
+
+}

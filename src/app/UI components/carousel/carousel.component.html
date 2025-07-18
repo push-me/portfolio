@@ -1,0 +1,24 @@
+<div [ngClass]="['carousel-container',config.animationType]">
+    <!-- Image Display -->
+    <div *ngFor="let image of config.images; let i = index" 
+    [ngClass]="{
+        'carousel-item':true,
+        'showPrev': i===prevImg && nextClicked,
+        'showNext': i===prevImg && prevClicked,
+        'animateNext': i===currentIndex && nextClicked,
+        'animatePrev': i===currentIndex && prevClicked,
+        'active': i === currentIndex}">
+        <img [src]="image" [alt]="'Image ' + (i + 1)">
+        <div *ngIf="config.showCaptions" class="caption">{{ captions![i] }}</div>
+    </div>
+
+    <!-- Arrows -->
+    <button *ngIf="config.showArrows" (click)="prev()" class="prev-arrow" [ngStyle]="config.arrowStyles">❮</button>
+    <button *ngIf="config.showArrows" (click)="next()" class="next-arrow" [ngStyle]="config.arrowStyles">❯</button>
+
+    <!-- Indicators -->
+    <div *ngIf="config.showIndicators" class="indicators">
+        <span *ngFor="let image of config.images; let i = index" [class.active]="i === currentIndex"
+            (click)="goToSlide(i)"></span>
+    </div>
+</div>

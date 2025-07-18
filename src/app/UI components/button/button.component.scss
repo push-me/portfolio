@@ -1,0 +1,359 @@
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  //height: 100%;
+
+  button {
+    width: 100%;
+  }
+
+  button.btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    // border-radius: 0.375rem;
+
+    //HOVER EFFECTS
+    &.hover-shadow:hover {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    &.hover-outline:hover {
+      outline: 2px solid #007bff;
+      transition: none;
+    }
+
+    &.hover-dim:hover {
+      opacity: 0.8;
+    }
+
+    //CLICK EFFECTS
+    &.click-press {
+      transform: translateY(2px);
+    }
+
+    &.click-primary-glow {
+      box-shadow: 0 0 20px rgba(0, 0, 255, 0.5);
+    }
+
+    &.click-border {
+      outline: 2px solid black;
+      transition: none;
+
+      .dark {
+        outline: 2px solid #fff;
+      }
+    }
+
+    //BUTTONS
+    &.primary {
+      background-color: #007bff;
+      color: white;
+
+      &:hover:not([disabled]) {
+        background-color: #0056b3;
+      }
+
+      &.active {
+        background-color: #0a58ca;
+      }
+    }
+
+    &.primary-outlined {
+      border: 1px solid #0d6efd;
+      color: #0d6efd;
+      background: transparent;
+      //box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+
+      &:hover:not([disabled]) {
+        background-color: #007bff;
+        color: #fff;
+      }
+
+      &.active {
+        background-color: #007bff;
+        color: #fff;
+      }
+    }
+
+    &.secondary {
+      background-color: #6c757d;
+      color: white;
+
+      &:hover:not([disabled]) {
+        background-color: #5a6268;
+      }
+
+      &.active {
+        background-color: #5a6268;
+      }
+    }
+
+    &.secondary-outlined {
+      background: transparent;
+      color: #6c757d;
+      border: 1px solid #6c757d;
+
+      &:hover:not([disabled]) {
+        color: #fff;
+        background-color: #6c757d;
+       
+      }
+
+      &.active {
+        color: #fff;
+        background-color: #6c757d;
+      }
+    }
+
+    &.success {
+      background-color: #28a745;
+      color: white;
+
+      &:hover:not([disabled]) {
+        background-color: #218838;
+      }
+
+      &.active {
+        background-color: #218838;
+      }
+    }
+
+    &.success-outlined {
+      background: transparent;
+      color: #198754;
+      border: 1px solid #198754;
+
+      &:hover:not([disabled]) {
+        color: #fff;
+        background-color: #198754;
+      }
+
+      &.active {
+        color: #fff;
+        background-color: #198754;
+      }
+    }
+
+    &.danger {
+      background-color: #dc3545;
+      color: white;
+
+      &:hover:not([disabled]) {
+        background-color: #c82333;
+      }
+
+      &.active {
+        background-color: #c82333;
+      }
+    }
+
+    &.danger-outlined {
+      color: #dc3545;
+      border: 1px solid #dc3545;
+      background: transparent;
+
+      &:hover:not([disabled]) {
+        color: #fff;
+        background-color:#dc3545;
+      }
+
+      &.active {
+        color: #fff;
+        background-color:#dc3545;
+      }
+    }
+
+    &.warning {
+      background-color: #ffc107;
+      color: black;
+
+      &:hover:not([disabled]) {
+        color: #000;
+        background-color: #ffca2c;
+      }
+
+      &.active {
+        color: #000;
+        background-color: #ffca2c;
+      }
+    }
+
+    &.warning-outlined {
+      color: #ffc107;
+      border: 1px solid #ffc107;
+      background: transparent;
+
+      &:hover:not([disabled]) {
+        color: #000;
+        background-color: #ffc107;
+      }
+
+      &.active {
+        color: #000;
+        background-color: #ffc107;
+      }
+    }
+
+    &.info {
+      background-color: #17a2b8;
+      color: #000;
+
+      &:hover:not([disabled]) {
+        background-color: #31d2f2;
+        color: #000;
+      }
+
+      &.active {
+        background-color: #31d2f2;
+        color: #000;
+      }
+    }
+
+    &.info-outlined {
+      color: #17a2b8;
+      border: 1px solid #17a2b8;
+      background: transparent;
+
+      &:hover:not([disabled]) {
+        color: #000;
+        background-color: #17a2b8;
+      }
+
+      &.active {
+        color: #000;
+        background-color: #17a2b8;
+      }
+    }
+
+    &.light {
+      background-color: #f8f9fa;
+      color: black;
+
+      &:hover:not([disabled]) {
+        color: #000;
+        background-color: #d3d4d5;
+      }
+
+      &.active {
+        color: #000;
+        background-color: #d3d4d5;
+      }
+    }
+
+    &.light-outlined {
+      color: #f8f9fa;
+      border: 1px solid #f8f9fa;
+      background: transparent;
+
+      &:hover:not([disabled]) {
+        color: #000;
+        background-color: #f8f9fa;
+      }
+
+      &.active {
+        color: #000;
+        background-color: #f8f9fa;
+      }
+    }
+
+    &.dark {
+      background-color: #212529;
+      color: #fff;
+
+      &.click-border {
+        box-shadow: inset 0 0 0 1px #fff;
+      }
+
+      &:hover:not([disabled]) {
+        color: #fff;
+        background-color: #424649;
+      }
+
+      &.active {
+        color: #fff;
+        background-color: #424649;
+      }
+    }
+
+    &.dark-outlined {
+      color: #212529;
+      border: 1px solid #212529;
+      background: transparent;
+
+      &:hover:not([disabled]) {
+        color: #fff;
+        background-color: #212529;
+      }
+
+      &.active {
+        color: #fff;
+        background-color: #212529;
+      }
+    }
+
+    &.borderless {
+      color: #000;
+      background: none;
+
+      &.active {
+        outline: 1px solid #000;
+        box-shadow: none;
+      }
+
+      &[disabled] {
+        outline: 1px solid #000;
+      }
+    }
+
+    &[disabled] {
+      cursor: not-allowed;
+      opacity: 0.65;
+      user-select: none;
+    }
+
+    &.active {
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    &.selected {
+      background-color: #f9ecc4;
+      color: rgb(69, 39, 39);
+    }
+
+    &.btn-group-item {
+      border-radius: 0;
+    }
+  }
+}
+
+.flex-container:not(.btnGroup) .btn {
+  border-radius: 0.375rem;
+}
+
+.btnGroup {
+
+  .horizontal-first {
+    border-top-left-radius: 0.375rem;
+    border-bottom-left-radius: 0.375rem;
+  }
+
+  .vertical-first {
+    border-top-left-radius: 0.375rem;
+    border-top-right-radius: 0.375rem;
+  }
+
+  .horizontal-last {
+    border-top-right-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+  }
+
+  .vertical-last {
+    border-bottom-left-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+  }
+
+}

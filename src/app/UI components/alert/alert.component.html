@@ -1,0 +1,8 @@
+<div id="alertContainer" *ngIf="showAlert" [style.opacity]="containerOpacity" [ngClass]="getAlertClass()" role="alert">
+    <span *ngIf="config.htmlMessage" [innerHTML]="config.htmlMessage"></span>
+    <span *ngIf="config.message" class="message">{{ config.message }}</span>
+    <button *ngIf="config.dismissible" type="button" class="btn-close" aria-label="Close" (click)="closeAlert()">
+        <app-icon [config]="{ name: 'close'}"></app-icon>
+    </button>
+    <ng-content></ng-content>
+</div>

@@ -1,0 +1,17 @@
+<nav aria-label="Page navigation">
+    <ul class="pagination">
+        <li class="page-item" [ngClass]="{'disabled': currentPage === 1}">
+            <a class="page-link" (click)="goToPage(currentPage - 1)" *ngIf="!config.useIcons">Previous</a>
+            <app-icon *ngIf="config.previousIcon" [config]="{name:config.previousIcon}" class="page-link"
+                (click)="goToPage(currentPage - 1)"></app-icon>
+        </li>
+        <li class="page-item" *ngFor="let page of pages" [ngClass]="{'active': currentPage === page}">
+            <a class="page-link" (click)="goToPage(page)">{{ page }}</a>
+        </li>
+        <li class="page-item" [ngClass]="{'disabled': currentPage === totalPages}">
+            <a class="page-link" (click)="goToPage(currentPage + 1)" *ngIf="!config.useIcons">Next</a>
+            <app-icon *ngIf="config.nextIcon" [config]="{name:config.nextIcon}" class="page-link"
+                (click)="goToPage(currentPage + 1)"></app-icon>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,26 @@
+.navMargin {
+  margin: 20px;
+}
+.breadcrumb {
+    list-style: none;
+    display: flex;
+    padding: 0;
+  }
+  
+  .breadcrumb li {
+    display: flex;
+    align-items: center;
+  }
+  
+  .breadcrumb li a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .breadcrumb li span {
+    margin: 0 8px;
+  }
+  
+  .breadcrumb li a:hover {
+    text-decoration: underline;
+  }
