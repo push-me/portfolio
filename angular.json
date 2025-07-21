@@ -20,8 +20,6 @@
             "outputPath": "dist/portfolio",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "baseHref": "/portfolio/",
-            "deployUrl": "/portfolio/",
             "polyfills": [
               "zone.js"
             ],
@@ -50,7 +48,9 @@
                   "maximumError": "8kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "/portfolio/",
+              "deployUrl": "/portfolio/"
             },
             "development": {
               "optimization": false,
