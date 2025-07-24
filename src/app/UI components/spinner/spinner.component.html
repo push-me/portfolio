@@ -1,6 +1,0 @@
-<div [ngClass]="['spinner-container', config.position]" [style.margin]="config.margin">
-    <div *ngIf="config.type === 'default'" class="spinner default-spinner" [style.color]="config.color"></div>
-    <div *ngIf="config.type === 'growing'" class="spinner growing-spinner" [style.backgroundColor]="config.color"></div>
-    <span *ngIf="config.text">{{ config.text }}</span>
-</div>
-  
