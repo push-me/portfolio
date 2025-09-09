@@ -20,6 +20,7 @@
             "outputPath": "dist/portfolio",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "baseHref": "/portfolio/",
             "polyfills": [
               "zone.js"
             ],
@@ -49,8 +50,8 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "/portfolio/",
-              "deployUrl": "/portfolio/"
+              "baseHref": "/portfolio/"
+
             },
             "development": {
               "optimization": false,
@@ -97,6 +98,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }

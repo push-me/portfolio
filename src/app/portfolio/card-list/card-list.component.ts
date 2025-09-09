@@ -12,7 +12,7 @@ import { BreadcrumbComponent } from '../../UI components/breadcrumb/breadcrumb.c
 })
 export class CardListComponent {
   card1Cfg : CardConfig = {
-    imageSrc: '../../../assets/UI/gallery/girl-1.png',
+    imageSrc: 'assets/UI/gallery/girl-1.png',
     title: 'Custom Card Title',
     description: 'This is a customizable card component.',
     listItems: ['Item 1', 'Item 2', 'Item 3'],
@@ -20,7 +20,7 @@ export class CardListComponent {
   }
 
   card2Cfg : CardConfig = {
-    imageSrc: '../../../assets/UI/gallery/girl-2.png',
+    imageSrc: 'assets/UI/gallery/girl-2.png',
     title: 'Custom Card Title',
     description: 'This is a customizable card component.',
     listItems: ['Item 1', 'Item 2', 'Item 3'],
@@ -28,7 +28,7 @@ export class CardListComponent {
   }
 
   card3Cfg : CardConfig = {
-    imageSrc: '../../../assets/UI/gallery/people.png',
+    imageSrc: 'assets/UI/gallery/people.png',
     title: 'Custom Card Title',
     description: 'This is a customizable card component.',
     listItems: ['Item 1', 'Item 2', 'Item 3'],

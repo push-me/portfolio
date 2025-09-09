@@ -11,12 +11,12 @@ import { CarouselComponent } from '../../UI components/carousel/carousel.compone
 })
 export class CarouselListComponent {
   imageList:string[] = [
-    '../../../assets/UI/gallery/ocean-1.png',
-    '../../../assets/UI/gallery/ocean-2.png',
-    '../../../assets/UI/gallery/ocean-3.png',
-    '../../../assets/UI/gallery/ocean-4.png',
-    '../../../assets/UI/gallery/waterfall.png',
-    '../../../assets/UI/gallery/bananas.png',
-    '../../../assets/UI/gallery/elephants.png',
+    'assets/UI/gallery/ocean-1.png',
+    'assets/UI/gallery/ocean-2.png',
+    'assets/UI/gallery/ocean-3.png',
+    'assets/UI/gallery/ocean-4.png',
+    'assets/UI/gallery/waterfall.png',
+    'assets/UI/gallery/bananas.png',
+    'assets/UI/gallery/elephants.png',
   ]
 }

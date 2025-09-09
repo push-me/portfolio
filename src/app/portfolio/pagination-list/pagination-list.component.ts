@@ -15,21 +15,21 @@ import { BreadcrumbComponent } from '../../UI components/breadcrumb/breadcrumb.c
 })
 export class PaginationListComponent implements OnInit {
   iconImages = [
-    {name:'../../../assets/UI/gallery/ocean-1.png'},
-    {name:'../../../assets/UI/gallery/ocean-2.png'},
-    {name:'../../../assets/UI/gallery/ocean-3.png'},
-    {name:'../../../assets/UI/gallery/ocean-4.png'},
-    {name:'../../../assets/UI/gallery/waterfall.png'},
-    {name:'../../../assets/UI/gallery/bananas.png'},
+    {name:'assets/UI/gallery/ocean-1.png'},
+    {name:'assets/UI/gallery/ocean-2.png'},
+    {name:'assets/UI/gallery/ocean-3.png'},
+    {name:'assets/UI/gallery/ocean-4.png'},
+    {name:'assets/UI/gallery/waterfall.png'},
+    {name:'assets/UI/gallery/bananas.png'},
   ]
 
   allItems:any = [
-    {name:'../../../assets/UI/gallery/ocean-1.png'},
-    {name:'../../../assets/UI/gallery/ocean-2.png'},
-    {name:'../../../assets/UI/gallery/ocean-3.png'},
-    {name:'../../../assets/UI/gallery/ocean-4.png'},
-    {name:'../../../assets/UI/gallery/waterfall.png'},
-    {name:'../../../assets/UI/gallery/bananas.png'},
+    {name:'assets/UI/gallery/ocean-1.png'},
+    {name:'assets/UI/gallery/ocean-2.png'},
+    {name:'assets/UI/gallery/ocean-3.png'},
+    {name:'assets/UI/gallery/ocean-4.png'},
+    {name:'assets/UI/gallery/waterfall.png'},
+    {name:'assets/UI/gallery/bananas.png'},
   ]  // Example list of items
   displayedItems: any[]=[]; // Items for the current page
   constructor(

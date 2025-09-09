@@ -14,7 +14,7 @@ import { BreadcrumbComponent } from '../../UI components/breadcrumb/breadcrumb.c
 export class PlaceholderListComponent {
 
   card1Cfg : CardConfig = {
-    imageSrc: '../../../assets/UI/gallery/girl-1.png',
+    imageSrc: 'assets/UI/gallery/girl-1.png',
     title: 'Custom Card Title',
     description: 'This is a customizable card component.',
     listItems: ['Item 1', 'Item 2', 'Item 3'],
@@ -22,7 +22,7 @@ export class PlaceholderListComponent {
   }
 
   placeHolderCfg: CardConfig = {
-    imageSrc: '../../../assets/UI/gallery/girl-1.png',
+    imageSrc: 'assets/UI/gallery/girl-1.png',
     title: 'Custom Card Title',
     description: 'This is a customizable card component.',
     listItems: ['Item 1', 'Item 2', 'Item 3'],
